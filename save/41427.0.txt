@@ -1,0 +1,63 @@
+@0
+
+
+@1
+MOV UP,DOWN
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+MOV UP,ACC
+MOV ACC,DOWN
+MOV ACC,RIGHT
+
+@6
+MOV LEFT,ACC
+MOV ACC,DOWN
+
+@7
+
+
+@8
+SUB ACC
+START:
+# CHECK FOR NULLS
+    SWP
+    MOV UP,ACC
+    JEZ END
+    SUB ACC
+    SWP
+
+    ADD UP
+    JMP START
+END:
+    SWP
+    MOV ACC,DOWN
+    ADD UP
+
+@9
+SUB ACC
+START:
+# CHECK FOR NULLS
+    SWP
+    MOV UP,ACC
+    JEZ END
+    SUB ACC
+    SWP
+
+    ADD UP
+    JMP START
+END:
+    SWP
+    MOV ACC,DOWN
+    ADD UP
+
+@10
+
